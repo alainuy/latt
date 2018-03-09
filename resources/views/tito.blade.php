@@ -23,7 +23,7 @@
                         <input type="text" class="form-control input-lg" id="employeeID" placeholder="Ex: 8100">
                         <small id="emailHelp" class="form-text text-muted">We'll never share your employee ID with anyone else.</small>
                       </div>  --}}
-                    {!! Form::open(['action' => 'AttendancesController@store', 'method' => 'POST', 'autocomplete' => 'off']) !!}
+                    {!! Form::open(['action' => 'AttendancesController@store', 'method' => 'POST', 'autocomplete' => 'off', 'onkeypress' => 'return event.keyCode != 13;']) !!}
                   
                       {{--  <div>
                             {{ Form::label('name', $current ) }}
@@ -31,15 +31,22 @@
 
                       <div class="form-group">                       
                          {{ Form::label('employeeid', 'Employee ID:' ) }} <br>
-                         {{ Form::text('emp_id', '', ['class' => 'form-control input-lg', 'placeholder' => 'EX: 8100']) }} 
-                         {{--  {{ Form::hidden('time_in'), {{ now() }} }}  --}}
-                         <div>
-                           <br> 
-                         {{ Form::button('Time IN', ['type'=>'submit', 'name' => 'btnIn', 'value' => 'btnIn', 'class' => 'btn btn-primary btn-lg ']) }}
-                         {{ Form::button('Time Out', ['type'=>'submit', 'name' => 'btnOut', 'value' => 'btnOut', 'class' => 'btn btn-danger btn-lg']) }}
+                         <div class="center-block">
+                         {{ Form::text('emp_id', '', ['class' => 'form-control form-control-inline', 'autofocus', 'size' => '3', 'maxlength' => '4', 'required', 'placeholder' => '8100']) }} 
                         </div>
+                         {{--  {{ Form::hidden('time_in'), {{ now() }} }}  --}}
+                         <div class="row">
+                           <br> 
+                              <div class="pull-left">
+                                  {{ Form::button('Time IN', ['type'=>'submit', 'name' => 'btnIn', 'value' => 'btnIn', 'class' => 'btn btn-primary btn-lg ']) }}
+                              </div>
+
+                              <div class="pull-right">
+                                {{ Form::button('Time Out', ['type'=>'submit', 'name' => 'btnOut', 'value' => 'btnOut', 'class' => 'btn btn-danger btn-lg']) }}
+                              </div>
+                         </div>
                         <hr>
-                        <small>Copyright - WaRHeAStyLe - 2018</small>
+                        <small>-= =-</small>
                       </div>
                     {!! Form::close() !!} 
 

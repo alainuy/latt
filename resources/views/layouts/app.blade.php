@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link rel="stylesheet" href="{{asset('css/input.css')}}">        
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-        <title>{{config('app.name')}}</title>
+        <title>{{config('app.name', 'VCB-TITO')}}</title>
         {{--  <title>Ti<i class="fas fa-bolt"></i></span>To</title>  --}}
 
         

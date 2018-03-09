@@ -43,6 +43,8 @@ Route::get('/db', function()
     // Select all from attendances where emp_id = 8136;
 
     // $attendance = DB::table('attendances')->where('emp_id', $emp_id)->whereNull('time_out')->update(['time_out' => $now, 'updated_at' => $now])->get();
+    
+
     DB::table('attendances')->where('emp_id', $emp_id)->whereNull('time_out')->update(['time_out' => $now, 'updated_at' => $now]);
     return 'Time Out Successful!';
 

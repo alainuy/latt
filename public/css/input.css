@@ -1,0 +1,9 @@
+.form-control-inline {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    margin-left: 65px;
+    min-width: 120px;
+    height: 70px;
+    width: auto;
+    /* display: inline; */
+}
