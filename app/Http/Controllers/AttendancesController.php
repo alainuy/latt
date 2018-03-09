@@ -63,6 +63,12 @@ class AttendancesController extends Controller
         if (isset($_POST['btnIn'])) { 
             /* do Time IN */ 
 
+                $this->validate(request(), [
+                    'emp_id' => 'required|digits:4'
+                ]);
+
+
+
                 $now = Carbon::now();
 
                 $timein = new Attendance;
@@ -75,6 +81,11 @@ class AttendancesController extends Controller
 
         } else if (isset($_POST['btnOut'])) { 
            /* do Time OUT */ 
+
+                $this->validate(request(), [
+                    'emp_id' => 'required|digits:4'
+                ]);
+
                 $now = Carbon::now();
                 $emp_id = $request->emp_id;
 

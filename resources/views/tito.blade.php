@@ -32,7 +32,7 @@
                       <div class="form-group">                       
                          {{ Form::label('employeeid', 'Employee ID:' ) }} <br>
                          <div class="center-block">
-                         {{ Form::text('emp_id', '', ['class' => 'form-control form-control-inline', 'autofocus', 'size' => '3', 'maxlength' => '4', 'required', 'placeholder' => '8100']) }} 
+                         {{ Form::text('emp_id', '', ['class' => 'form-control form-control-inline', 'autofocus', 'size' => '3', 'maxlength' => '4', 'placeholder' => '8100']) }} 
                         </div>
                          {{--  {{ Form::hidden('time_in'), {{ now() }} }}  --}}
                          <div class="row">
