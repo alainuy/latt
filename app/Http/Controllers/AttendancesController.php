@@ -68,7 +68,6 @@ class AttendancesController extends Controller
                 ]);
 
 
-
                 $now = Carbon::now();
 
                 $timein = new Attendance;
