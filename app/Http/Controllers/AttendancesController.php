@@ -73,6 +73,7 @@ class AttendancesController extends Controller
                 $timein = new Attendance;
                 $timein->emp_id = $request->emp_id;
                 $timein->time_in = $now;
+                // $timein->user_id = $request->emp_id;
                 $timein->save();
                 
                 // return redirect('/');
