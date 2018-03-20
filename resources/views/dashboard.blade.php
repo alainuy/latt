@@ -24,13 +24,13 @@
                             <th>ePLDT ID</th>
                             <th>Name</th>
                             <th>Log IN</th>
-                            <th>Log Out</th>
+                            <th>Log OUT</th>
                         </tr>
 
                         @foreach ($attendances as $attendance)
 
                             <tr>
-                                <td> {{$attendance->emp_id}} </td>
+                                <td> {{ auth()->user()->emp_id }} </td>
                                 <td> {{ auth()->user()->name }} </td>
                                 <td> {{$attendance->time_in}} </td>
                                 <td> {{$attendance->time_out}} </td>
