@@ -51,3 +51,7 @@ Route::get('/db', function()
     // dd($attendance);
 
 });
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');
