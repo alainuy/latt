@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading"> Hello {{ auth()->user()->name }}</div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    <div>
+                           
+                    </div>
+                    
 
                     <table class="table table-stripped">
                         <tr>
@@ -28,7 +31,7 @@
 
                             <tr>
                                 <td> {{$attendance->emp_id}} </td>
-                                <td> {{$attendance->name}} </td>
+                                <td> {{ auth()->user()->name }} </td>
                                 <td> {{$attendance->time_in}} </td>
                                 <td> {{$attendance->time_out}} </td>
                             </tr>
