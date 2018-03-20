@@ -32,8 +32,8 @@
                             <tr>
                                 <td> {{ auth()->user()->emp_id }} </td>
                                 <td> {{ auth()->user()->name }} </td>
-                                <td> {{$attendance->time_in}} </td>
-                                <td> {{$attendance->time_out}} </td>
+                                <td> {{ $attendance->time_in }} </td>
+                                <td> {{ $attendance->time_out }} </td>
                             </tr>
                             
                         @endforeach
